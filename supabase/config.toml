@@ -1,0 +1,4 @@
+project_id = "buimcxaoqtxtmwcpnkxo"
+
+[functions.create-application-payment]
+verify_jwt = false

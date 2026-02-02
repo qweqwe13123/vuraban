@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 10% 15%;
+
+    --primary: 150 35% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 60% 50%;
+    --secondary-foreground: 150 10% 15%;
+
+    --muted: 150 10% 96%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 45 70% 55%;
+    --accent-foreground: 150 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 10% 90%;
+    --input: 150 10% 90%;
+    --ring: 150 35% 30%;
+
+    --radius: 0.5rem;
+
+    /* Custom Greenland colors */
+    --greenland-green: 150 35% 30%;
+    --greenland-green-dark: 150 40% 22%;
+    --greenland-green-light: 150 30% 40%;
+    --greenland-gold: 45 80% 50%;
+    --greenland-gold-light: 45 70% 60%;
+    --greenland-gold-dark: 40 85% 40%;
+    --greenland-cream: 45 30% 96%;
+    --greenland-warm: 30 15% 95%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 150 35% 30%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 150 10% 96%;
+    --sidebar-accent-foreground: 150 35% 30%;
+    --sidebar-border: 150 10% 90%;
+    --sidebar-ring: 150 35% 30%;
+  }
+
+  .dark {
+    --background: 150 15% 8%;
+    --foreground: 45 20% 95%;
+
+    --card: 150 15% 10%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 150 15% 10%;
+    --popover-foreground: 45 20% 95%;
+
+    --primary: 45 80% 50%;
+    --primary-foreground: 150 15% 8%;
+
+    --secondary: 150 30% 25%;
+    --secondary-foreground: 45 20% 95%;
+
+    --muted: 150 20% 15%;
+    --muted-foreground: 150 10% 65%;
+
+    --accent: 45 70% 55%;
+    --accent-foreground: 150 15% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 45 80% 50%;
+    
+    --sidebar-background: 150 15% 10%;
+    --sidebar-foreground: 45 20% 95%;
+    --sidebar-primary: 45 80% 50%;
+    --sidebar-primary-foreground: 150 15% 8%;
+    --sidebar-accent: 150 20% 15%;
+    --sidebar-accent-foreground: 45 20% 95%;
+    --sidebar-border: 150 20% 18%;
+    --sidebar-ring: 45 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold tracking-wide text-foreground;
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50;
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(90deg, hsl(45 80% 50%), hsl(45 70% 60%), hsl(45 80% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply text-foreground/80 hover:text-primary transition-colors duration-200 font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
