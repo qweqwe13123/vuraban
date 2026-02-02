@@ -15,11 +15,11 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-lg font-display font-bold text-primary-foreground">GREENLAND</span>
-                <p className="text-xs tracking-widest text-primary-foreground/70 uppercase">Luxury Living</p>
+                <p className="text-xs tracking-widest text-primary-foreground/70 uppercase">Cozy Living</p>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Experience luxury living in the heart of Portland. Modern apartments with stunning views and first-class amenities.
+              Experience cozy living in the heart of Portland. Modern apartments with stunning views and first-class amenities.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="text-sm text-primary-foreground/60 text-center">
-            © {new Date().getFullYear()} Greenland Luxury Living. All rights reserved.
+            © {new Date().getFullYear()} Greenland Cozy Living. All rights reserved.
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
             <hr className="border-border mb-8" />
             
             <p>
-              This privacy policy (the "Privacy Policy" or "Policy") of Greenland Luxury Living ("Company," "we," "us," 
+              This privacy policy (the "Privacy Policy" or "Policy") of Greenland Cozy Living ("Company," "we," "us," 
               or "our") describes our privacy practices regarding personal information we collect, including from persons 
               ("you" or "your") who access our property's website or our related mobile applications that may be available 
               for download (collectively, the "Site").
@@ -153,7 +153,7 @@ const PrivacyPolicy = () => {
               you can contact us using any of the methods below:
             </p>
             <p>
-              <strong>Greenland Luxury Living</strong><br />
+              <strong>Greenland Cozy Living</strong><br />
               77 NE Grand Ave<br />
               Portland, OR 97232<br />
               Email: greenlandlivingofficial@gmail.com<br />

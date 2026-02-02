@@ -63,7 +63,7 @@ const GreenlandLogo = () => {
           GREENLAND
         </span>
         <span className="text-[10px] tracking-[0.25em] text-muted-foreground uppercase">
-          Luxury Living
+          Cozy Living
         </span>
       </div>
     </Link>

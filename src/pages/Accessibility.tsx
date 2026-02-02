@@ -16,7 +16,7 @@ const Accessibility = () => {
               
               <h2 className="text-xl font-display font-semibold mt-8 mb-4 text-foreground">Our Commitment to Accessibility</h2>
               <p>
-                Greenland Luxury Living is committed to ensuring digital accessibility for people with disabilities. 
+                Greenland Cozy Living is committed to ensuring digital accessibility for people with disabilities. 
                 We are continually improving the user experience for everyone and applying the relevant accessibility 
                 standards to guarantee we provide equal access to all users.
               </p>

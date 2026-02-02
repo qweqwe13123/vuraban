@@ -106,31 +106,16 @@ const Index = () => {
             Greenland — Apartments in Portland, OR
           </h2>
           <p className="max-w-4xl mx-auto text-lg leading-relaxed text-primary-foreground/90">
-            Discover our premier apartment community, Greenland Luxury Living, in Portland, OR. This vibrant community 
-            is nestled in the heart of the city near the Burnside Bridge, close to delicious restaurants and boutique 
-            local stores. All of our apartments are pet-friendly and the perfect home for professionals, students, 
-            families, seniors, and everyone in between. Take a closer look at everything we have in store for you!
+            Discover Greenland, a welcoming apartment community designed for comfortable everyday living. Our thoughtfully designed, pet-friendly apartments offer a warm and inviting place to call home for professionals, students, families, seniors, and everyone in between. With a focus on comfort, convenience, and a sense of community, Greenland is a place where you can truly feel at home.
           </p>
           
           {/* Quick Links */}
-          <div className="grid md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
+          <div className="flex justify-center mt-12 max-w-4xl mx-auto">
             <Link 
               to="/floor-plans" 
-              className="bg-greenland-green-dark hover:bg-greenland-green-light transition-colors py-4 px-6 rounded text-lg font-semibold tracking-wide"
-            >
-              FLOOR PLANS
-            </Link>
-            <Link 
-              to="/neighborhood" 
               className="bg-greenland-gold hover:bg-greenland-gold-light transition-colors py-4 px-6 rounded text-lg font-semibold tracking-wide text-foreground"
             >
-              LOCATION
-            </Link>
-            <Link 
-              to="/contact" 
-              className="bg-greenland-green-dark hover:bg-greenland-green-light transition-colors py-4 px-6 rounded text-lg font-semibold tracking-wide"
-            >
-              SCHEDULE A TOUR
+              APPLY
             </Link>
           </div>
         </div>

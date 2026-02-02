@@ -783,7 +783,7 @@ const Apply = () => {
                     onCheckedChange={(checked) => updateFormData("agreeToBackgroundCheck", checked as boolean)}
                   />
                   <Label htmlFor="agreeToBackgroundCheck" className="text-sm leading-relaxed cursor-pointer">
-                    I authorize Greenland Luxury Living to conduct a credit check, criminal background check, and verify my rental and employment history. *
+                    I authorize Greenland Cozy Living to conduct a credit check, criminal background check, and verify my rental and employment history. *
                   </Label>
                 </div>
               </div>

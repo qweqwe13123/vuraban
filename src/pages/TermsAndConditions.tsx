@@ -19,7 +19,7 @@ const TermsAndConditions = () => {
             </p>
 
             <p>
-              This Site is owned and operated by Greenland Luxury Living to offer certain services to renters and potential 
+              This Site is owned and operated by Greenland Cozy Living to offer certain services to renters and potential 
               renters (the "Services").
             </p>
 
@@ -137,7 +137,7 @@ const TermsAndConditions = () => {
               If you have questions regarding these Terms, please contact us at:
             </p>
             <p>
-              <strong>Greenland Luxury Living</strong><br />
+              <strong>Greenland Cozy Living</strong><br />
               77 NE Grand Ave<br />
               Portland, OR 97232<br />
               Email: greenlandlivingofficial@gmail.com<br />

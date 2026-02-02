@@ -43,7 +43,7 @@ const Amenities = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Amenities</h1>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto">
-            Discover the exceptional amenities that make Greenland the premier choice for luxury living in Portland.
+            Discover the exceptional amenities that make Greenland the premier choice for cozy living in Portland.
           </p>
         </div>
       </section>
