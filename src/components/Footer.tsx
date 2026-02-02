@@ -87,7 +87,7 @@ const Footer = () => {
             </Link>
           </div>
           <p className="text-sm text-primary-foreground/60 text-center">
-            © {new Date().getFullYear()} Greenland Cozy Living. All rights reserved.
+            © 2024 Greenland Cozy Living. All rights reserved.
           </p>
         </div>
       </div>

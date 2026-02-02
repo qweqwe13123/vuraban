@@ -137,9 +137,6 @@ const FloorPlans = () => {
                     alt={plan.name}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
-                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                    {plan.available} Available
-                  </div>
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
@@ -164,7 +161,7 @@ const FloorPlans = () => {
                     </span>
                   </div>
                   <Button className="w-full mt-4 bg-primary hover:bg-greenland-green-dark">
-                    View Details <ChevronRight size={16} className="ml-1" />
+                    Apply Now <ChevronRight size={16} className="ml-1" />
                   </Button>
                 </div>
               </div>

@@ -83,10 +83,10 @@ const Index = () => {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 animate-fade-in tracking-wide">
-            EXPERIENCE LUXURY<br />LIVING IN PORTLAND
+            Experience Cozy Living in Portland
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Located east of the Burnside Bridge on Grand Avenue, Greenland offers residents the best views of the eastern side of the City of Roses. Come for a tour and let us show you everything!
+            At Greenland, residents enjoy a warm and inviting community with beautifully designed apartments, perfect for professionals, students, families, and seniors alike!
           </p>
           <Button
             asChild
