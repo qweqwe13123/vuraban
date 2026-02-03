@@ -27,7 +27,7 @@ const PaymentSuccess = () => {
                 Application Submitted Successfully!
               </h1>
               <p className="text-xl text-muted-foreground mb-2">
-                Thank you for applying to Greenland Cozy Living.
+                Thank you for applying to Greenland Luxury Living.
               </p>
               <p className="text-muted-foreground">
                 Your $5.00 application fee has been processed.

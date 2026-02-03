@@ -5,13 +5,32 @@ import type { Database } from './types';
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
+// Debug: Log Supabase configuration (only in development)
+if (import.meta.env.DEV) {
+  console.log("Supabase Configuration:", {
+    url: SUPABASE_URL ? SUPABASE_URL.substring(0, 30) + "..." : "MISSING",
+    key: SUPABASE_PUBLISHABLE_KEY ? SUPABASE_PUBLISHABLE_KEY.substring(0, 20) + "..." : "MISSING",
+  });
+}
+
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: {
-    storage: localStorage,
-    persistSession: true,
-    autoRefreshToken: true,
+if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+  console.error("⚠️ Supabase environment variables are missing!");
+  console.error("Please check your .env file contains:");
+  console.error("VITE_SUPABASE_URL=...");
+  console.error("VITE_SUPABASE_PUBLISHABLE_KEY=...");
+}
+
+export const supabase = createClient<Database>(
+  SUPABASE_URL || "https://placeholder.supabase.co",
+  SUPABASE_PUBLISHABLE_KEY || "placeholder-key",
+  {
+    auth: {
+      storage: localStorage,
+      persistSession: true,
+      autoRefreshToken: true,
+    },
   }
-});
+);

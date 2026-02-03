@@ -177,6 +177,21 @@ const Apply = () => {
     setIsSubmitting(true);
     
     try {
+      // Check if Supabase is configured
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+      
+      if (!supabaseUrl || !supabaseKey) {
+        console.error("Supabase not configured:", { supabaseUrl, supabaseKey });
+        throw new Error("Supabase configuration is missing. Please check your environment variables.");
+      }
+
+      console.log("Calling Edge Function with:", {
+        email: formData.email,
+        hasSelectedPlan: !!selectedPlan,
+        supabaseUrl: supabaseUrl.substring(0, 30) + "...",
+      });
+
       const { data, error } = await supabase.functions.invoke('create-application-payment', {
         body: {
           email: formData.email,
@@ -185,22 +200,32 @@ const Apply = () => {
         },
       });
 
+      console.log("Edge Function response:", { data, error });
+
       if (error) {
-        throw error;
+        console.error("Supabase function error:", error);
+        throw new Error(error.message || "Failed to create payment session. Please check if the Edge Function is deployed.");
+      }
+
+      // Check if response contains error
+      if (data?.error) {
+        console.error("Payment function error:", data.error);
+        throw new Error(data.error || "Payment processing failed");
       }
 
       if (data?.url) {
         // Redirect to Stripe Checkout
         window.location.href = data.url;
       } else {
-        throw new Error("No checkout URL received");
+        console.error("No URL in response:", data);
+        throw new Error("No checkout URL received from payment service");
       }
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : "Payment processing failed";
-      console.error("Payment error:", errorMessage);
+      console.error("Payment error details:", error);
       toast({
         title: "Payment Error",
-        description: "There was an issue processing your payment. Please try again.",
+        description: errorMessage || "There was an issue processing your payment. Please try again.",
         variant: "destructive",
       });
       setIsSubmitting(false);
